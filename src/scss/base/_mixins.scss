@@ -1,0 +1,61 @@
+@use 'variables' as v;
+
+@mixin min-telefono{
+  @media (min-width: v.$telefono) {
+    @content;
+  }
+}
+
+@mixin min-tablet{
+  @media (min-width: v.$tablet) {
+    @content;
+  }
+}
+
+@mixin min-desktop{
+  @media (min-width: v.$desktop) {
+    @content;
+  }
+}
+
+@mixin min-desktopXL{
+  @media (min-width: v.$desktopXL) {
+    @content;
+  }
+}
+
+@mixin max-telefono{
+  @media (max-width: v.$telefono) {
+    @content;
+  }
+}
+
+@mixin max-tablet{
+  @media (max-width: v.$tablet) {
+    @content;
+  }
+}
+
+@mixin max-desktop{
+  @media (max-width: v.$desktop) {
+    @content;
+  }
+}
+
+@mixin max-desktopXL{
+  @media (max-width: v.$desktopXL) {
+    @content;
+  }
+}
+
+@mixin grid($columnas, $gap){
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  gap: $gap;
+}
+
+@mixin resetear-lista{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
